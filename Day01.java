@@ -1,7 +1,16 @@
 
 public class Day01 {
     public static void main(String[] args) {
-        String input = "11111111011111";
+        int n = 00000000000000000000000000110011;
+        int ans=0;
+            while(n!=0){
+                n=n&(n-1);
+                ans++;
+            }
+    System.out.println(ans);
+
+        /*
+        String input = "00000000000000000000000000100011";
         int arr[] = new int[input.length()];
         int result = 0;
 
@@ -14,7 +23,8 @@ public class Day01 {
         }
 
         System.out.println(result);
-        
-
+        */
     }
+
 }
+
