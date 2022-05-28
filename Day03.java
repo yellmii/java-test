@@ -8,12 +8,15 @@ public class Day03 {
 
         // If x is a negative number it is not a palindrome
         // If x % 10 = 0, in order for it to be a palindrome the first digit should also be 0
-        if (x < 0 || (x != 0 && x % 10 == 0))
+        if(x < 0 || (x != 0 && x%10 == 0)) {
             System.out.println("false");
+            return;
+        }
         int res = 0;
-        while (x > res) {
-            res = res * 10 + x % 10;
-            x = x / 10;
+
+        while(x > res) {
+            res = res*10 + x%10;
+            x = x/10;
         }
 
         // If x is equal to reversed number then it is a palindrome
